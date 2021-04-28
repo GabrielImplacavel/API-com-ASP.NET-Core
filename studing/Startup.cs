@@ -16,6 +16,9 @@ namespace studing
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //This shit is necessary beacuse i am using a old version of this shit
+            services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,16 +28,22 @@ namespace studing
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
+            app.UseCors(config =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Testando essa caceta!");
-                });
+                config.AllowAnyHeader();
+                config.AllowAnyMethod();
+                config.AllowAnyOrigin();
             });
+            app.UseMvc();
+            // app.UseRouting();
+
+            // app.UseEndpoints(endpoints =>
+            // {
+            //     endpoints.MapGet("/", async context =>
+            //     {
+            //         await context.Response.WriteAsync("Testando essa caceta!");
+            //     });
+            // });
         }
     }
 }

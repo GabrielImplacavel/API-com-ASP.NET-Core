@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VGR\\Desktop\\studing\\studing\\studing.csproj": {}
+    "C:\\Users\\VGR\\Desktop\\studing\\API-com-ASP.NET-Core\\studing\\studing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VGR\\Desktop\\studing\\studing\\studing.csproj": {
+    "C:\\Users\\VGR\\Desktop\\studing\\API-com-ASP.NET-Core\\studing\\studing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VGR\\Desktop\\studing\\studing\\studing.csproj",
+        "projectUniqueName": "C:\\Users\\VGR\\Desktop\\studing\\API-com-ASP.NET-Core\\studing\\studing.csproj",
         "projectName": "studing",
-        "projectPath": "C:\\Users\\VGR\\Desktop\\studing\\studing\\studing.csproj",
+        "projectPath": "C:\\Users\\VGR\\Desktop\\studing\\API-com-ASP.NET-Core\\studing\\studing.csproj",
         "packagesPath": "C:\\Users\\VGR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VGR\\Desktop\\studing\\studing\\obj\\",
+        "outputPath": "C:\\Users\\VGR\\Desktop\\studing\\API-com-ASP.NET-Core\\studing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VGR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
